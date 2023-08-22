@@ -7,7 +7,7 @@ befor install:
   - docker build -t react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  -docker run react-test npm test -- --covarage
+  -docker run react-test npm test -- --coverage
 
 after_success:
   - docker build -t multi-client ./client
